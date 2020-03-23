@@ -1,103 +1,104 @@
 body {
-    
-  background-color: rgb(191, 201, 139) ;
-  background: radial-gradient(ellipse at center, rgb(187, 196, 142) 0%, rgb(180, 194, 113) 100%);
+  background-color: rgb(191, 201, 139);
+  background: radial-gradient(
+    ellipse at center,
+    rgb(187, 196, 142) 0%,
+    rgb(180, 194, 113) 100%
+  );
   justify-content: center;
-
 }
 /*######## 1.Table ########*/
 div {
-    background-color: black;
-    color: blanchedalmond;
-    text-align: center;
+  background-color: black;
+  color: blanchedalmond;
+  text-align: center;
 }
 table {
-    margin-left:auto; 
-    margin-right:auto; 
+  margin-left: auto;
+  margin-right: auto;
 }
 
 table tr:nth-child(odd) {
-    background-color: aliceblue;
-    color: black;
+  background-color: aliceblue;
+  color: black;
 }
 table tr:nth-child(even) {
-    background-color: gray;
-    color: black;
+  background-color: gray;
+  color: black;
 }
 tr:hover {
-    font-weight: bold;
+  font-weight: bold;
 }
 /*######## 2.List ########*/
-ul{
-    list-style: none;
+ul {
+  list-style: none;
 }
 ul li::before {
- content:"\2600";
+  content: "\2600";
 }
 
 /*######## 3.Button ########*/
 
 button {
-    color: blue;
-    position: relative;
-    background-color: coral;
+  color: blue;
+  position: relative;
+  background-color: coral;
 }
 button:hover {
-    border: 5px;
-    background-color: darkgoldenrod;
-    transition: ease 200ms;
+  border: 5px;
+  background-color: darkgoldenrod;
+  transition: ease 200ms;
 }
 button:active {
-    color: green;
-    background-color: honeydew;
-    transition: ease 200ms;
+  color: green;
+  background-color: honeydew;
+  transition: ease 200ms;
 }
 button:disabled {
-    color: hotpink;
-    background-color: indigo;
-    box-shadow: 5px 10px;
-    transition: ease 200ms;
+  color: hotpink;
+  background-color: indigo;
+  box-shadow: 5px 10px;
+  transition: ease 200ms;
 }
 /*######## 4.Tool Tip ########*/
 .tooltip {
-
   border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
 }
 .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
-    position: absolute;
-    z-index: 1;
-    transform: translateY(-30px);
-  }
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  transform: translateY(-30px);
+}
 
 .tooltip:hover .tooltiptext {
-    visibility: visible;
-  }
-  .tooltip .tooltiptext::before {
-    content: " ";
-    position: absolute;
-    top: 100%; /* At the bottom of the tooltip */
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: black transparent transparent transparent;
-    transform: translateX(-10px);
-  }
+  visibility: visible;
+}
+.tooltip .tooltiptext::before {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+  transform: translateX(-10px);
+}
 
 /*######## 5.Modal ########*/
-@keyframes ease-in {
+@keyframes dissaperence {
   0% {
     top: 0px;
   }
   100% {
-    top: 50%;
+    top: 100%;
   }
 }
 @keyframes apperance {
@@ -110,50 +111,50 @@ button:disabled {
 }
 
 .modal {
-    opacity:0;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(145, 57, 57); 
-    background-color: rgba(189, 75, 75, 0.4);
-    animation: ease-in 5s 1;
-}
-
-.modal-two {
-  display: block;
-  opacity:1;
+  opacity: 0;
   position: fixed;
   z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgb(145, 57, 57); 
-  background-color: rgba(189, 75, 75, 0.4); 
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(145, 57, 57);
+  background-color: rgba(189, 75, 75, 0.4);
+  animation-name: dissaperence;
+  animation-duration: 4s;
+}
+
+.modal-two {
+  opacity: 1;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(145, 57, 57);
+  background-color: rgba(189, 75, 75, 0.4);
   animation-name: apperance;
   animation-duration: 4s;
 }
 
 .modal-content {
   background-color: #e23030;
-  margin: 15% auto; 
+  margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; 
+  width: 80%;
 }
 
- .close {
+.close {
   color: purple;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
-  
+
 .close:hover,
 .close:focus {
   color: black;
@@ -164,21 +165,40 @@ button:disabled {
 /*######## 6.Bell ########*/
 
 @keyframes spin {
-
-  0% {transform: rotate(0deg);}
-  8% {transform: rotate(45deg);}
-  16% {transform: rotate(0deg);}
-  24% {transform: rotate(-45deg);}
-  32% {transform: rotate(0deg);}
-  68% {transform: rotate(0deg);}
-  76% {transform: rotate(45deg);}
-  84% {transform: rotate(0deg);}
-  92% {transform: rotate(-45deg);}
-  100% {transform: rotate(0deg);}
+  0% {
+    transform: rotate(0deg);
+  }
+  8% {
+    transform: rotate(45deg);
+  }
+  16% {
+    transform: rotate(0deg);
+  }
+  24% {
+    transform: rotate(-45deg);
+  }
+  32% {
+    transform: rotate(0deg);
+  }
+  68% {
+    transform: rotate(0deg);
+  }
+  76% {
+    transform: rotate(45deg);
+  }
+  84% {
+    transform: rotate(0deg);
+  }
+  92% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .fa {
-  color:black;
+  color: black;
 
   animation: spin 2500ms linear 0ms infinite normal both;
 }
@@ -186,67 +206,56 @@ button:disabled {
 /*######## 7.Ikona Zegarka ########*/
 @import "compass/css3";
 .clock {
- 
-  transform:translateY(100px) translateX(100px);
-	width: 50px;
-	height: 50px;
-	border-radius: 30px;
-	border: solid 5px black;
-	left: 50%;
-	margin-left: -25px;
-	top: 50%;
-  margin-top: -25px;
+  /*   position:relative; */
+  /*   transform:scale(2); */
+  border-radius: 20%;
+  border: 2px solid black;
+  width: 50px;
   background-color: rgb(191, 201, 139);
-  border-radius: 5px;
+  height: 50px;
+  position: relative;
 }
-.hours {
-		position: absolute;
-		width: 24px;
-		height: 5px;
-    top: 22.5px;
-    border-radius: 5px;
-    left: 12.5px;
-		animation: you-spin-me-round-round-baby-right-round 5s linear 0s infinite;
-}
-.hours:before {
-	content: "";
-	height: 5px;
-  width: 11px;
-  left: 12.5px;
-	position: absolute;
-	background: rgb(191, 201, 139);
-	
-}
- 
-.minutes {
-	position: absolute;
-	width: 48px;
-	height: 5px;
-  top: 22.5px;
-  border-radius: 5px;
-	animation: you-spin-me-round-round-baby-right-round 2s linear 0s infinite;
-}
-.hours:before {
-	content: "";
-	height: 5px;
-  width: 11px;
-  left: 12.5px;
-	position: absolute;
-	background: rgb(191, 201, 139);
-	
-}
-.minutes:before {
-	content: "";
-	height: 5px;
-	width: 24px;
-	position: absolute;
-  /* left: 2px; */
-  background: rgb(191, 201, 139);
 
+.clock:after {
+  position: absolute;
+  width: 0px;
+  height: 20px;
+  display: block;
+  border-left: 2px solid black;
+  content: "";
+  left: 22px;
+  top: 4px;
+  animation-duration: 1s;
 }
-@keyframes you-spin-me-round-round-baby-right-round {
-	0% { transform: rotate(0deg); }
-	100% { transform: rotate(360deg); }
+
+.clock:before {
+  position: absolute;
+
+  width: 0px;
+  height: 20px;
+  display: block;
+  border-left: 2px solid black;
+  content: "";
+  left: 22px;
+  top: 5px;
+  animation-duration: 60s;
+}
+
+.clock:before,
+.clock:after {
+  transform-origin: bottom;
+  animation-name: dial;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes dial {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 /*######## Ekstra Zegar ########*/
 
